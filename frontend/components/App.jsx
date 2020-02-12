@@ -11,18 +11,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 const App = () => (
 <div>
     <header>
-        <Link to="/">
 
-        </Link>
-
-
-        {/* <Link to="/">
-            <h1>Welcome to SmartInvest!</h1>
-        </Link> */}
-        {/* <Route path="/"/> */}
-
-        {/* <Route exact path="/login" component={LoginFormContainer}/>
-        <Route exact path="/signup" component={SignupContainer}/> */}
     </header>
     <Route exact path = "/" component={NavBar}/>
         <Route exact path = "/" component={Splash}/>
