@@ -21,9 +21,9 @@ const logoutCurrentUser = () => ({
 export const signup = user => dispatch => {
   return APIUtil.signup(user)
   .then( (user) => dispatch(receiveCurrentUser(user)) )
-  .catch( (error) => {
-    error.responseJSON;
-  });
+  // .catch( (error) => {
+  //   error.responseJSON;
+  // });
 };
 
 export const login = user => dispatch => {

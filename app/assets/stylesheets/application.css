@@ -13,3 +13,103 @@
  *= require_tree .
  *= require_self
  */
+
+ @font-face {font-family: "DINNextW01-Regular"; src: url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.eot"); src: url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.woff") format("woff"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1daa609fdca8da38e5bcbb12c2a987db.svg#DINNextW01-Regular") format("svg"); }
+
+ .SignInPage {
+     display: flex;
+ }
+
+ .signInPageImage {
+    width: 700px;
+    height: 700px;
+ }
+
+ .signInForm {
+     display: flex;
+     justify-content: center;
+     align-content: center;
+     flex-direction: column;
+     padding: 20px;
+     margin-left: 30px;
+     /* height: 100%;
+     width:100%; */
+ }
+
+ .green-button-sign-in {
+     background-color: #21CE99;
+     color: white;
+     padding: 0px 48px;
+     width: 139.7px;
+     height: 48px;
+     font: 13px "DIN Pro";
+     border-radius: 4px;
+ }
+
+ .signInInput::hover {
+    background-color: white;
+}
+
+ .signInInput {
+    background-color: #FAFAFA;
+    padding: 15px 20px;
+    width: 400px;
+    border-radius: 4px;
+    border-color: #FAFAFA;
+ }
+
+ .InputTitle {
+     padding: 9px 0px;
+ }
+
+ .signUpContainer {
+     margin: 12%;
+     display: block;
+     /* text: center; */
+ }
+
+ .SignUpForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+ .signup-field {
+    background: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    height: 46px;
+    padding-left: 18px;
+    margin: 20px;
+    border-radius: 4px;
+ }
+
+ .name-input {
+     display: flex;
+     justify-content : space-between;
+     width: 90%
+ }
+
+ .green-button-sign-out {
+    background-color: #21CE99;
+    color: white;
+    /* padding: 0px 48px; */
+    /* width: 90%; */
+    height: 48px;
+    font: 20px "DIN Pro";
+    border-radius: 4px;
+    margin: 20px;
+    font-family: "DINNextW01-Regular"
+}
+
+.sign-up-header1 {
+    font-size: 36px;
+    font-weight: 100;
+    margin: 20px 20px 20px;
+}
+
+.sign-up-header2 {
+    font-size: 28px;
+    font-weight: 100;
+    margin: 20px 20px 20px;
+}
