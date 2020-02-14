@@ -7,9 +7,14 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
   <script type="text/javascript">
     window.signIn_picture = "<%= image_url("signIn_picture.png") %>"
+    window.github = "<%= image_url("Github.png") %>"
+    window.linkedin = "<%= image_url("linkedin.png") %>"
+    window.bang = "<%= image_url("bang.png") %>"
+
   </script>
 
   <body>

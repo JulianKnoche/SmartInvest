@@ -12,8 +12,8 @@ class SignInForm extends React.Component {
 
     handleSubmit (e) {
         e.preventDefault();
-        this.props.processForm(this.state);
-        this.props.history.push("/profile");
+        this.props.processForm(this.state).then(() => this.props.history.push("/profile"));
+        // if (this.props.errors.length === 0) this.props.history.push("/profile");
     }
 
     update(field) {
@@ -21,6 +21,21 @@ class SignInForm extends React.Component {
             this.setState({ [field]: e.target.value })
         }
     }
+
+    renderErrors() {
+        return(
+          <ul className="ulerrors">
+
+            {this.props.errors.map((error, i) => (
+
+              <li className= "errors" key={`error-${i}`}>
+                  <img className="bang" src={bang}/>
+                <div>{error}</div>
+              </li>
+            ))}
+          </ul>
+        );
+      }
 
     render () {
 
@@ -41,6 +56,8 @@ class SignInForm extends React.Component {
 
                     <input type="password" className="signInInput" onChange={this.update('password')}/>
                 </label>
+                    <br/>
+                    {this.renderErrors()}
                     <br/>
                     <button className="green-button-sign-in" onClick={this.handleSubmit}>Sign In</button>
             </form>

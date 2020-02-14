@@ -6,20 +6,22 @@ import UserProfileContainer from './user_portfolio/user_portfolio_container';
 import NavBar  from './splash/nav';
 import Splash from './splash/splash';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
+import Footer from './splash/footer';
+
 
 
 const App = () => (
 <div>
     <header>
-
     </header>
-    <Route exact path = "/" component={NavBar}/>
+        <Route exact path = "/" component={NavBar}/>
         <Route exact path = "/" component={Splash}/>
     <Switch>
 
-        <Route exact path="/login" component={LoginFormContainer}/>
-        <Route exact path="/signup" component={SignupContainer}/>
-        <Route exact path="/profile" component={UserProfileContainer}/>
+        <AuthRoute exact path="/login" component={LoginFormContainer}/>
+        <AuthRoute exact path="/signup" component={SignupContainer}/>
+        <ProtectedRoute exact path="/profile" component={UserProfileContainer}/>
+        <Route path = "/" component={Footer}/>
     </Switch>
 </div>
 )

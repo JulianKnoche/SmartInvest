@@ -3,7 +3,7 @@ import UserProfile from './user_porfolio_page';
 import { connect } from 'react-redux'
 
 const mstp = state => ({
-    prop1: "a"
+    currentUser: "a"
 })
 
 const mdtp = dispatch => ({

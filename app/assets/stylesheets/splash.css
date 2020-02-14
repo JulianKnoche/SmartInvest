@@ -4,7 +4,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 1400px;
+    /* width: 1400px; */
     height: 700px;
 }
 
@@ -33,7 +33,7 @@
     width: 139.7px;
     height: 48px;
     font: 20px "DIN Pro";
-    border-radius: 4px;
+    border-radius: 8px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -44,9 +44,152 @@
 
 .navBar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    height: 40px;
+    height: 60px;
     font-family: "DINNextW01-Regular";
+}
+
+
+.footer {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-evenly;
+    height: 120px;
+    align-items: center;
+    padding-bottom: 2%;
+}
+
+.footer-header {
+    display: flex;
+    justify-content: center;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 2%;
+    font-family: "DINNextW01-Regular";
+    /* font-weight: bold; */
+}
+
+/* .icon {
+    size: 100px;
+} */
+
+.splash-video {
+    display: flex;
+    justify-content: center;
+    /* padding-top: 2%; */
+    /* padding-bottom: 2%; */
+    background-color: white;
+}
+
+.linkedinimg {
+    background-color: #f5f5f5;
+    width: 80px;
+
+}
+
+.green-signup-button-homepage {
+background-color: #21CE99;
+/* background: none; */
+color: black;
+/* padding: 0px 48px; */
+/* width: 90%; */
+/* height: 140px; */
+padding: 10px;
+font: 20px "DIN Pro";
+font-weight: 900;
+border-radius: 4px;
+margin: 20px;
+font-family: "DINNextW01-Regular";
+text-decoration: none;
+transition:color 0.25s ease;
+position: relative;
+display: relative;
+}
+
+.green-signup-button-homepage::after {
+border-radius: 4px;
+position: absolute;
+content: "";
+top:0;
+left: 0px;
+top: 0px;
+width: 0px;
+height: 100%;
+/* z-index: -1; */
+transform-origin:left;
+transition:width 0.25s ease;
+transition-duration: 500ms;
+transition-timing-function: ease;
+background-color: #18563e;
+color:white;
+/* width: 80%; */
+/* background: transparent; */
+}
+
+.green-signup-button-homepage:hover {
+    color: white;
+    /* content: "It's broken!" */
+}
+
+.green-signup-button-homepage:hover::after {
+    width: 100%;
+    content: "It's broken!"
+}
+
+.text-inside-Sign-up-button {
+      z-index: 4;
+
+  }
+
+/* .green-signup-button-homepage:hover {
+    transition-property: "width";
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    background-color: black;
+    color:white;
+}
+    transform-origin: left; */
+    /* transition:width 0.25s ease; */
+    /* background-position: 0 -100%; */
+    /* transition: black 0.5s linear; */
+
+    /* transform-origin:left;
+  transition:width 0.25s ease;
+  z-index:-1; */
+
+/*
+.btn:hover::after {
+    width: 100%;
+  } */
+
+
+
+.signin-button-homepage {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    font-weight: 900;
+}
+
+.signin-button-homepage:hover {
+    color: rgb(24, 86, 62);
+}
+
+
+.navBar .auth-buttons-homepage {
+    /* display: flex;
+    justify-content: flex-end; */
+    margin-right: 5px;
+
+}
+
+.SmartInvest-name-homepage {
+    text-decoration: none;
+    font-size: 35px;
+    color: black;
+    font-weight: 900;
+    margin-left: 30px;
+    font-style: italic;
 }
 

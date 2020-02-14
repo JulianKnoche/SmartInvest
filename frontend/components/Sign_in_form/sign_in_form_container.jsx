@@ -3,6 +3,8 @@ import SignInForm from './sign_in_form';
 import { login } from '../../actions/session_actions';
 
 const mstp = state => ({
+    currentUser: state.session,
+    errors: Object.values(state.errors.session),
     formType: 'signIn'
 })
 
