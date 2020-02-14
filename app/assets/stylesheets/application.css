@@ -79,19 +79,30 @@ html, body {
 }
 
  .signup-field {
+     box-sizing: border-box;
     background: #fff;
     font-size: 18px;
     font-weight: 400;
     height: 46px;
     padding-left: 18px;
-    margin: 20px;
+    margin: 15px 0px;
     border-radius: 4px;
+    width: 100%;
  }
 
  .name-input {
      display: flex;
      justify-content : space-between;
-     width: 90%
+     width: inherit;
+     /* width: 90% */
+ }
+
+ .right-input {
+     margin-left: 10px;
+ }
+
+ .left-input {
+     margin-right: 10px;
  }
 
  .green-button-sign-up {
@@ -102,7 +113,7 @@ html, body {
     height: 48px;
     font: 20px "DIN Pro";
     border-radius: 4px;
-    margin: 20px;
+    margin: 20px 0px;
     font-family: "DINNextW01-Regular"
 }
 
@@ -144,3 +155,6 @@ html, body {
     padding-left: 0;
 }
 
+.signup-errors {
+    margin-left: 20px;
+}
