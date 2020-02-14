@@ -134,7 +134,7 @@ color:white;
 
 .green-signup-button-homepage:hover::after {
     width: 100%;
-    content: "It's broken!"
+    content: "It's borken!"
 }
 
 .text-inside-Sign-up-button {

@@ -67,8 +67,12 @@ html, body {
  }
 
  .signUpContainer {
-     margin: 12%;
+     /* margin: 12%; */
      display: block;
+     margin: auto;
+    max-width: 650px;
+    margin-top: 5%;
+    /* background-color: gray; */
      /* text: center; */
  }
 
@@ -130,9 +134,10 @@ html, body {
 }
 
 .sign-in-div-on-sign-up-page {
-    margin-left: 10%;
+    margin: auto;
     color: gray;
     font-size: 20px;
+    font-family: "DINNextW01-Regular"
 }
 .sign-in-text-on-sign-up-page {
     color: #21CE99;
