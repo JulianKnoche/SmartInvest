@@ -9,9 +9,10 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getNews().then( () => {
-            return this.displayNews()
-        })
+        this.props.getNews()
+        // this.props.getNews().then( () => {
+        //     return this.displayNews()
+        // })
     }
 
     handleSubmit() {
@@ -19,21 +20,35 @@ class UserProfile extends React.Component {
     }
 
     displayNews() {
-        if (this.props.news === {} ){
-            return null;
-        }
         // debugger
-        return Array.from(this.props.news) //.articles.author
+        if (this.props.news === []){
+            return ["a"];
+        } else {
+        return this.props.news.map( (key,i) => {
+           return (
+               <li key={`${key}-${i}`}>
+                   <a className= "news-feed-titles" href={`${key.url}`}>{ key.title }</a>
+                    <p>{key.content}</p>
+                </li>
+                  )
+        })
+        }
     }
 
     render () {
         return (
-        <div className="home-nav-bar">
-            <h3>Welcome to your SmartInvest Homepage!</h3>
-            {/* <Link to="/">Home</Link> */}
-            <Link to="/" onClick={() => this.handleSubmit()} > Logout</Link>
+        <div className="home-page">
+            <div className="navBar-home-page">
+                <h1>Welcome to your SmartInvest Homepage!</h1>
+                <Link to="/" onClick={() => this.handleSubmit()} > Logout</Link>
+            </div>
             <br/>
-            {this.displayNews()}
+            <div className="news-feed">
+                <h2>News Feed</h2>
+                <ul>
+                    {this.displayNews()}
+                </ul>
+            </div>
         </div>
         )
     }

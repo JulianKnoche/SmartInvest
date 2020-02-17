@@ -4,7 +4,7 @@ import { getNews } from '../../actions/news_action';
 import { logout } from '../../actions/session_actions';
 
 const mstp = state => {
-    // debugger
+    // debugger;
     return {
         news: state.entities.news
 
