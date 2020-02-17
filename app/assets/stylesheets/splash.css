@@ -55,7 +55,7 @@
     background-color: #f5f5f5;
     display: flex;
     justify-content: space-evenly;
-    height: 120px;
+    height: 50px;
     align-items: center;
     padding-bottom: 2%;
 }
@@ -134,13 +134,15 @@ color:white;
 
 .green-signup-button-homepage:hover::after {
     width: 100%;
-    content: "It's borken!"
+    content: "Sign Up";
+    /* text-align: center; */
+    /* vertical-align: middle; */
+    /* margin: auto; */
 }
 
-.text-inside-Sign-up-button {
+/* .text-inside-Sign-up-button {
       z-index: 4;
-
-  }
+  } */
 
 /* .green-signup-button-homepage:hover {
     transition-property: "width";

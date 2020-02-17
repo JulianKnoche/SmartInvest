@@ -20,11 +20,14 @@ html, body {
 
  .SignInPage {
      display: flex;
+     height: 100%;
+     width: 100%;
+     position: absolute;
  }
 
  .signInPageImage {
-    width: 700px;
-    height: 700px;
+    width: 50%;
+    height: 100%;
  }
 
  .signInForm {
@@ -34,25 +37,19 @@ html, body {
      flex-direction: column;
      padding: 20px;
      margin-left: 30px;
-     /* height: 100%;
-     width:100%; */
  }
 
  .green-button-sign-in {
      background-color: #21CE99;
      color: white;
-     padding: 0px 48px;
-     width: 139.7px;
+     padding: 0px 40px;
+     width: 145px;
      height: 48px;
-     font: 13px "DIN Pro";
+     font: 15px "DIN Pro";
      border-radius: 4px;
      font-family: "DINNextW01-Regular";
      font-weight: 900;
  }
-
- .signInInput::hover {
-    background-color: white;
-}
 
  .signInInput {
     background-color: #FAFAFA;
@@ -60,7 +57,19 @@ html, body {
     width: 400px;
     border-radius: 4px;
     border-color: #FAFAFA;
+    border: 1px solid #b1bfc4
  }
+
+ .signInInput::hover {
+    background-color: white;
+}
+
+.signInInput:focus {
+    outline: 1px #21CE99;
+    border-color:  #21CE99;
+}
+
+
 
  .InputTitle {
      padding: 9px 0px;
@@ -83,7 +92,7 @@ html, body {
 }
 
  .signup-field {
-     box-sizing: border-box;
+    box-sizing: border-box;
     background: #fff;
     font-size: 18px;
     font-weight: 400;
@@ -92,7 +101,26 @@ html, body {
     margin: 15px 0px;
     border-radius: 4px;
     width: 100%;
+    border-color: #FAFAFA;
+    border: 1px solid #b1bfc4
  }
+
+ .signup-field:focus {
+    outline: 1px #21CE99;
+    border-color:  #21CE99;
+}
+
+.signup-error {
+    outline: 1px red;
+    border-color:  red;
+    color:red
+}
+
+.signup-error:focus {
+    outline: 1px red;
+    border-color:  red;
+    color: red;
+}
 
  .name-input {
      display: flex;
@@ -125,12 +153,14 @@ html, body {
     font-size: 36px;
     font-weight: 100;
     margin: 20px 20px 20px;
+    font-family: "DINNextW01-Regular";
 }
 
 .sign-up-header2 {
     font-size: 28px;
     font-weight: 100;
     margin: 20px 20px 20px;
+    font-family: "DINNextW01-Regular";
 }
 
 .sign-in-div-on-sign-up-page {
@@ -162,4 +192,22 @@ html, body {
 
 .signup-errors {
     margin-left: 20px;
+}
+
+.demo-login-button {
+background-color: #18563e;
+color: white;
+padding: 0px 0px;
+width: 145px;
+height: 48px;
+font: 15px "DIN Pro";
+border-radius: 4px;
+font-family: "DINNextW01-Regular";
+font-weight: 900;
+}
+
+.sign-in-buttons-sign-in-page {
+    display: flex;
+    justify-content: space-between;
+    /* align-content: flex-start; */
 }

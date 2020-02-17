@@ -8,6 +8,7 @@ class SignInForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.demologin = this.demologin.bind(this);
     }
 
     handleSubmit (e) {
@@ -37,11 +38,16 @@ class SignInForm extends React.Component {
         );
       }
 
-    render () {
+    demologin () {
+        this.props.login({email: "tommy@gmail.com", password: "hunter1234"}).then(() => this.props.history.push("/profile"));
+    }
 
+    render () {
         return (
         <div className="SignInPage">
+
             <img className="signInPageImage" src={window.signIn_picture}></img>
+
             <form className="signInForm">
                 <h2 className="h2title"> Welcome to SmartInvest </h2>
 
@@ -59,7 +65,10 @@ class SignInForm extends React.Component {
                     <br/>
                     {this.renderErrors()}
                     <br/>
-                    <button className="green-button-sign-in" onClick={this.handleSubmit}>Sign In</button>
+                    <div className="sign-in-buttons-sign-in-page">
+                        <button className="green-button-sign-in" onClick={this.handleSubmit}>Sign In</button>
+                        <button className="demo-login-button" onClick={this.demologin}>Sign In as Demo User</button>
+                    </div>
             </form>
         </div>
         )

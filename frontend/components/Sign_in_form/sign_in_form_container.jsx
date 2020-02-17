@@ -9,7 +9,8 @@ const mstp = state => ({
 })
 
 const mdtp = dispatch => ({
-    processForm: (user) => dispatch(login(user))
+    processForm: (user) => dispatch(login(user)),
+    login: (user) => dispatch(login(user))
 })
 
 export default connect(mstp, mdtp)(SignInForm);

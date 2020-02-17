@@ -6,9 +6,9 @@ const NavBar = (props) => {
 
         <div className="navBar">
             <a className="SmartInvest-name-homepage" href="/"> SmartInvest </a>
-            <a>Products</a>
+            {/* <a>Products</a>
             <a>Learn</a>
-            <a>Support</a>
+            <a>Support</a> */}
             <div className="auth-buttons-homepage">
             <Link className="signin-button-homepage" to="/login"> Sign In </Link>
             {/* <Link className="green-signup-button-homepage" to="/signup"> Sign Up </Link> */}
