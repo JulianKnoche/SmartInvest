@@ -14,3 +14,17 @@
     flex-direction: row;
     justify-content: space-around;
 }
+
+.li-of-newsfeed {
+display: flex;
+
+}
+
+.pictures-on-news-feed {
+    width: 196px;
+    height: 134px;
+}
+
+.img-text {
+    padding-left: 3%;
+}
