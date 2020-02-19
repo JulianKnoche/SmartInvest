@@ -7,6 +7,7 @@
 .news-feed-titles {
     font-size: large;
     font-weight: bold;
+
 }
 
 .navBar-home-page {
@@ -27,4 +28,8 @@ display: flex;
 
 .img-text {
     padding-left: 3%;
+}
+
+.homepage-body{
+    display: flex;
 }

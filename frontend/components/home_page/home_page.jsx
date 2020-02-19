@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import PortfolioChart from './portfolio_chart';
 
 class UserProfile extends React.Component {
     constructor(props) {
@@ -8,7 +9,9 @@ class UserProfile extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getNews()
+        this.props.getNews();
+        this.props.fetchTransactionData(this.props.currentUser.id);
+
     }
 
     handleSubmit() {
@@ -28,7 +31,7 @@ class UserProfile extends React.Component {
                    </div>
                    <div className="img-text">
                         <div>{key.source.name}</div>
-                        <a className= "news-feed-titles" href={`${key.url}`}>{ key.title }</a>
+                        <a className= "news-feed-titles" href={`${ key.url }`}>{ key.title }</a>
                         <p>{key.description}</p>
                     </div>
                 </li>
@@ -37,18 +40,24 @@ class UserProfile extends React.Component {
         }
     }
 
+
     render () {
         return (
         <div className="home-page">
             <div className="navBar-home-page">
-                <h1>Welcome to your SmartInvest Homepage!</h1>
+                <h1>Welcome, {this.props.currentUser.first_name} to your SmartInvest Homepage!</h1>
+                <Link to="/stocks"> Available Stocks for purchase</Link>
                 <Link to="/" onClick={() => this.handleSubmit()} > Logout</Link>
             </div>
 
-            {/* <br/>
+            <br/>
             <div>
-                <PortfolioChart/>
-            </div> */}
+                <h3>My portfolio</h3>
+                <div className="homepage-body">
+                    <PortfolioChart/>
+                    <div> My buying power is: {this.props.currentUser.buying_power}</div>
+                </div>
+            </div>
             <br/>
 
             <div className="news-feed">
