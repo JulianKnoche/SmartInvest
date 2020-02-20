@@ -5,7 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
 User.destroy_all
+Company.destroy_all
+
+require 'csv'
+myfile = open('app/assets/NYSETICKERS.csv')
+
+data = CSV.read(myfile)
+data[1..-1].each do |row|
+
+# ticker_list = data.map { |el| el[0] }
+# ticker_list[1..-1].each do |ticker|
+    Company.create!(ticker: row[0], company_name: row[1])
+end
+
+
 
 User.create!(first_name: "Tommy", last_name: "Duek", email: "tommy@gmail.com", password: "hunter1234", buying_power: 1000)
 User.create!(first_name: "Julian", last_name: "K", email: "julian@gmail.com", password: "hunter1234", buying_power: 1000)

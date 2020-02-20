@@ -2,3 +2,24 @@
     display: flex;
     justify-content: space-between;
 }
+
+table,
+td {
+    border: 1px solid #333;
+    margin: auto;
+    width: 500px;
+}
+
+thead,
+tfoot {
+    background-color: #18563e;
+    color: #fff;
+}
+
+.stock-index-page {
+    background-color: cadetblue;
+}
+
+.stock-index-table {
+    background-color: lightblue;
+}

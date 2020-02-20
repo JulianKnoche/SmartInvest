@@ -4,10 +4,12 @@ import SignupContainer from './Sign_up_form/sign_up_form_container';
 import LoginFormContainer from './Sign_in_form/sign_in_form_container';
 import Userhomepagecontainer from './home_page/home_page_container';
 import StockShowContainer from './stocks/stock_show_container';
+import StockIndexContainer from './stocks/stock_index_container';
 import NavBar  from './splash/nav';
 import Splash from './splash/splash';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Footer from './splash/footer';
+
 
 
 
@@ -23,8 +25,9 @@ const App = () => (
         <AuthRoute exact path="/signup" component={SignupContainer}/>
         <ProtectedRoute exact path="/profile" component={Userhomepagecontainer}/>
         <Route exact path="/stock/:stockSymbol" component={StockShowContainer}/>
-        <Route path = "/" component={Footer}/>
+        <Route exact path = "/stocks" component={StockIndexContainer}/>
     </Switch>
+    <Route exact path = "/" component={Footer}/>
 </div>
 )
 

@@ -9,7 +9,7 @@ const mstp = state => {
     return {
         news: state.entities.news,
         currentUser: state.entities.users[state.session.id],
-        thansactionData: state.entities.transactions
+        transactionData: state.entities.transactions
 }}
 
 const mdtp = dispatch => ({

@@ -1,7 +1,6 @@
 class Api::TransactionsController < ApplicationController
 
     def create
-      # debugger
       @transaction = Transaction.new(transaction_params)
 
       if @transaction.save
@@ -13,10 +12,11 @@ class Api::TransactionsController < ApplicationController
 
     def index
       # debugger
-      @transactions = User.find(params[:user_id]).transactions.all
+      @transactions = User.find(params[:user_id]).transactions
       # debugger
-      # render json: @transactions
-      render "api/users/transactions/index"
+      render json: @transactions
+
+      # render "api/users/transactions/index"
     end
 
     def transaction_params

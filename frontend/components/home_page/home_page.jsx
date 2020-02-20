@@ -40,6 +40,20 @@ class UserProfile extends React.Component {
         }
     }
 
+    parseListOfTransactions() {
+        // debugger
+        let list = Object.values(this.props.transactionData);
+        return list.map( transaction => {
+            return (
+            <tr key={transaction.id}>
+                <td>{transaction.ticker}</td>
+                <td>{transaction.units}</td>
+                <td>{transaction.price}</td>
+            </tr>
+                )
+        })
+    }
+
 
     render () {
         return (
@@ -56,6 +70,21 @@ class UserProfile extends React.Component {
                 <div className="homepage-body">
                     <PortfolioChart/>
                     <div> My buying power is: {this.props.currentUser.buying_power}</div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th colSpan="3"> History of my transactions </th>
+                            </tr>
+                            <tr>
+                                <th>Stock Ticker</th>
+                                <th>Count</th>
+                                <th>Unit Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {this.parseListOfTransactions()}
+                        </tbody>
+                    </table>
                 </div>
             </div>
             <br/>
@@ -66,6 +95,7 @@ class UserProfile extends React.Component {
                     {this.displayNews()}
                 </ul>
             </div>
+
         </div>
         )
     }

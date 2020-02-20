@@ -6,8 +6,8 @@ const transactionReducer = (state = [], action) => {
         case RECEIVE_TRANSACTION:
             // return Object.assign([],state,action.transaction)
         case RECEIVE_ALL_TRANSACTIONS:
-            debugger
-            return action.transactionData
+            // debugger
+            return Object.assign([], state, action.transactionData)
         default:
             return state;
     }
