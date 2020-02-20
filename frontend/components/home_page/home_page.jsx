@@ -60,8 +60,8 @@ class UserProfile extends React.Component {
         <div className="home-page">
             <div className="navBar-home-page">
                 <h1>Welcome, {this.props.currentUser.first_name} to your SmartInvest Homepage!</h1>
-                <Link to="/stocks"> Available Stocks for purchase</Link>
-                <Link to="/" onClick={() => this.handleSubmit()} > Logout</Link>
+                <Link className="homepage-button-in-nav-bar" to="/stocks"> Available Stocks for purchase</Link>
+                <Link className="homepage-button-in-nav-bar" to="/" onClick={() => this.handleSubmit()} > Logout</Link>
             </div>
 
             <br/>

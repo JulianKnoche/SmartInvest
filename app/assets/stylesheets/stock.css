@@ -1,6 +1,13 @@
 .StockShowPage {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+}
+
+.StockShowPage-navbar {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 2%;
 }
 
 table,
@@ -23,3 +30,4 @@ tfoot {
 .stock-index-table {
     background-color: lightblue;
 }
+

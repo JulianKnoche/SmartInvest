@@ -1,5 +1,6 @@
 import React from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import { Link } from 'react-router-dom';
 
 class StockShow extends React.Component {
     constructor(props) {
@@ -59,6 +60,9 @@ class StockShow extends React.Component {
         let currentMarketPrice = this.currentMarketPrice()
         return (
         <div className="StockShowPage">
+            <div className="StockShowPage-navbar">
+                <Link className="homepage-button-in-nav-bar" to="/profile" >Back to Homepage</Link>
+            </div>
             <div className="ChartShowView">
                 <h1>{this.props.symbol}'s stock chart</h1>
                 <LineChart width={900} height={600} data={this.parseStockData()}>

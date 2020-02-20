@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    margin: 0% 8%;
 }
 
 .news-feed-titles {
@@ -32,4 +33,18 @@ display: flex;
 
 .homepage-body{
     display: flex;
+}
+
+.homepage-button-in-nav-bar {
+    font: 22px "DIN Pro";
+    font-family: "DINNextW01-Regular";
+    font-weight: 900;
+    text-decoration: none;
+    color: black;
+    margin-top: 10px;
+
+}
+
+.homepage-button-in-nav-bar:hover {
+    color: #18563e;
 }

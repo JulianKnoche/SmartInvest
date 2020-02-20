@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 class StockIndex extends React.Component {
     constructor(props) {
@@ -24,20 +25,21 @@ class StockIndex extends React.Component {
     render () {
         return (
         <div className="stock-index-page">
-        <table className="stock-index-table">
-            <thead>
-                <tr>
-                    <th colSpan="2"> All Companies available for purchase </th>
-                </tr>
-                <tr>
-                    <th>Stock Ticker</th>
-                    <th>Company Name</th>
-                </tr>
-            </thead>
-            <tbody>
-                {this.fetchingAllStocks()}
-            </tbody>
-        </table>
+            <Link className="homepage-button-in-nav-bar" to="/profile" >Back to Homepage</Link>
+            <table className="stock-index-table">
+                <thead>
+                    <tr>
+                        <th colSpan="2"> All Companies available for purchase </th>
+                    </tr>
+                    <tr>
+                        <th>Stock Ticker</th>
+                        <th>Company Name</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {this.fetchingAllStocks()}
+                </tbody>
+            </table>
         </div>
         )
     }
