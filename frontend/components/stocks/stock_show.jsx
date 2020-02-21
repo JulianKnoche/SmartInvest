@@ -20,7 +20,8 @@ class StockShow extends React.Component {
     }
 
     componentDidMount() {
-        this.props.fetchStock(this.props.symbol)
+        this.props.fetchStock(this.props.symbol);
+        this.props.getNews(this.props.symbol);
     }
 
 
@@ -62,6 +63,28 @@ class StockShow extends React.Component {
             currency: 'USD',
           });
           return formatter.format(number);
+        }
+
+        displayNews() {
+            // debugger
+            if (this.props.news === []){
+                return ["a"];
+            } else {
+            return this.props.news.map( (key,i) => {
+               return (
+                   <li className="li-of-newsfeed" key={`${key}-${i}`}>
+                       <div>
+                            <img className="pictures-on-news-feed" src={key.urlToImage}></img>
+                       </div>
+                       <div className="img-text">
+                            <div>{key.source.name}</div>
+                            <a className= "news-feed-titles" href={`${ key.url }`}>{ key.title }</a>
+                            <p>{key.description}</p>
+                        </div>
+                    </li>
+                      )
+            })
+            }
         }
 
     render () {
@@ -116,6 +139,14 @@ class StockShow extends React.Component {
                         <div> {this.parseNumber(this.props.currentUser.buying_power)} </div>
                     </div>
                 </form>
+            </div>
+            <div className="stock-show-news-feed">
+            <div className="news-feed">
+                <h2 className= "news-feed-title">News Feed</h2>
+                <ul>
+                    {this.displayNews()}
+                </ul>
+            </div>
             </div>
         </div>
         )

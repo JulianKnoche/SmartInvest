@@ -140,3 +140,7 @@ tfoot {
 .back-to-homepage-button-on-stock-index-page:hover {
     color: #21CE99;
 }
+
+.stock-show-news-feed {
+    margin: 0 10%;
+}

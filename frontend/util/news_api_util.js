@@ -6,3 +6,10 @@ export const fetchNews = () => {
         url: 'https://newsapi.org/v2/everything?q=stock&pageSize=7&apiKey=159d8c59b37c449ba93d7a1483336737'
     })
 }
+
+export const fetchNewsStock = (ticker) => {
+    return $.ajax({
+        method: "GET",
+        url: `https://newsapi.org/v2/everything?q=${ticker}&pageSize=7&apiKey=159d8c59b37c449ba93d7a1483336737`
+    })
+}
