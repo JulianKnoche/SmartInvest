@@ -14,7 +14,7 @@
 .navBar-home-page {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .li-of-newsfeed {

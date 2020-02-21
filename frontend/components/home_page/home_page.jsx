@@ -46,7 +46,7 @@ class UserProfile extends React.Component {
         return list.map( transaction => {
             return (
             <tr key={transaction.id}>
-                <td>{transaction.ticker}</td>
+                <td><a href={`/#/stock/${transaction.ticker}`}>{transaction.ticker}</a></td>
                 <td>{transaction.units}</td>
                 <td>{transaction.price}</td>
             </tr>
@@ -59,7 +59,7 @@ class UserProfile extends React.Component {
         return (
         <div className="home-page">
             <div className="navBar-home-page">
-                <h1>Welcome, {this.props.currentUser.first_name} to your SmartInvest Homepage!</h1>
+                <h1 className="homepage-button-in-nav-bar">Welcome, {this.props.currentUser.first_name} to your SmartInvest Homepage!</h1>
                 <Link className="homepage-button-in-nav-bar" to="/stocks"> Available Stocks for purchase</Link>
                 <Link className="homepage-button-in-nav-bar" to="/" onClick={() => this.handleSubmit()} > Logout</Link>
             </div>
