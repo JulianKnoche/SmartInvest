@@ -56,6 +56,14 @@ class StockShow extends React.Component {
         this.setState({ buyStock: newState }, () => this.props.buyStock(this.state.buyStock));
     }
 
+    parseNumber(number) {
+        const formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD',
+          });
+          return formatter.format(number);
+        }
+
     render () {
         let currentMarketPrice = this.currentMarketPrice()
         return (
@@ -93,19 +101,19 @@ class StockShow extends React.Component {
                     </div>
                     <div className="form-row">
                         <div>Market Price</div>
-                        <div>{currentMarketPrice}</div>
+                        <div>{this.parseNumber(currentMarketPrice)}</div>
                     </div>
 
                     <div className="form-row">
                         <div> Estimated Cost </div>
-                        <div>{String(parseFloat(currentMarketPrice) * parseInt(this.state.shares))}</div>
+                        <div>{String(this.parseNumber((parseFloat(currentMarketPrice) * parseInt(this.state.shares))))}</div>
                     </div>
                     <div className="button-div">
                     <button className="buyStock-button" onClick={this.handleBuy} >Submit Buy</button>
                     </div>
                     <div className="form-row">
                         <div> My buying power is: </div>
-                        <div> {this.props.currentUser.buying_power} </div>
+                        <div> {this.parseNumber(this.props.currentUser.buying_power)} </div>
                     </div>
                 </form>
             </div>

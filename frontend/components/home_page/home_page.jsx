@@ -48,12 +48,19 @@ class UserProfile extends React.Component {
             <tr key={transaction.id}>
                 <td><a href={`/#/stock/${transaction.ticker}`}>{transaction.ticker}</a></td>
                 <td>{transaction.units}</td>
-                <td>{transaction.price}</td>
+                <td>{this.parseNumber(transaction.price)}</td>
             </tr>
                 )
         })
     }
-
+    parseNumber(number) {
+    const formatter = new Intl.NumberFormat('en-US', {
+        style: 'currency',
+        currency: 'USD',
+      });
+      return formatter.format(number);
+    }
+    
 
     render () {
         return (
@@ -70,7 +77,7 @@ class UserProfile extends React.Component {
                 <div className="homepage-body">
                     <PortfolioChart/>
                     <div className="side-stock-info-on-homepage">
-                        <div className="buying-power"> My buying power is: {this.props.currentUser.buying_power}</div>
+                        <div className="buying-power"> My buying power is: {this.parseNumber(this.props.currentUser.buying_power)}</div>
                         <table>
                             <thead>
                                 <tr>

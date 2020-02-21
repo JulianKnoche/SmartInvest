@@ -1,9 +1,9 @@
 .StockShowPage {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     /* background-color: #21CE99; */
-    height: 100vh;
+    /* height: 100vh; */
     /* padding-bottom: 60px; */
 }
 
@@ -31,7 +31,7 @@
 .stock-sidebar-form {
     /* position: fixed; */
     box-sizing: border-box;
-    width: 22%;
+    width: 23%;
     box-shadow: 0 0 4px 1px rgba(225, 225, 225, 0.5), 0 3px 24px rgba(225, 225, 225, 5);
     border-radius: 4px;
     margin-left: 5%;
