@@ -1,5 +1,18 @@
 # README
+
 SmartInvest - (https://smart-invest.herokuapp.com/)
+
+### Backend
+
+* Ruby 2.5.1
+* Rails 5.2.3
+* PostgreSQL
+
+## Frontend
+
+* React
+* Redux
+* JavaScript ES6
 
 SmartInvest is an investing app built using Ruby on Rails and React-redux. The idea was to imitate the robinhood website (www.robinhood.com).
 
