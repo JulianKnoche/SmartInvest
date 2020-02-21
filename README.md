@@ -2,18 +2,6 @@
 
 SmartInvest - (https://smart-invest.herokuapp.com/)
 
-### Backend
-
-* Ruby 2.5.1
-* Rails 5.2.3
-* PostgreSQL
-
-## Frontend
-
-* React
-* Redux
-* JavaScript ES6
-
 SmartInvest is an investing app built using Ruby on Rails and React-redux. The idea was to imitate the robinhood website (www.robinhood.com).
 
 Once you create an account on this app, you will be redirect to your homepage where you'll be able to see a news fees. The news feed is coming from the NewsAPI and has been filtered to only news articles related to stocks.
@@ -27,6 +15,19 @@ Each company in the Stock Index table is a link that takes you to a Stock show p
 The stock show page also displays a form to buy the stock. It takes in one input (the number of shares the user would like to buy) the current market price is the most recent price received from the World Trading Data API and used to calculate the overall cost of the transaction. On Submit, the buying power of the user changes accordingly.
 
 Once the user goes back to his homepage, he will see the list of stocks that he bought, the price and his buying power at that particular time.
+
+### Backend
+
+* Ruby 2.5.1
+* Rails 5.2.3
+* PostgreSQL
+
+## Frontend
+
+* React
+* Redux
+* JavaScript ES6
+
 
 ## Sign Up Page
 
