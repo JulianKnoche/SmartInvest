@@ -39,5 +39,6 @@ The stock show page also displays a form to buy the stock. It takes in one input
 
 Once the user goes back to his homepage, he will see the list of stocks that he bought, the price and his buying power at that particular time.
 
-<img width="697" alt="Screen Shot 2020-02-21 at 10 34 18 AM" src="https://user-images.githubusercontent.com/49321618/75047982-c8909400-5495-11ea-9b44-9de9a1049340.png">
-![Screen Shot 2020-02-21 at 10 32 35 AM](https://user-images.githubusercontent.com/49321618/75047999-cd554800-5495-11ea-83c6-5752482f39eb.png)
+<img width="697" alt="Sign Up Image" src="https://user-images.githubusercontent.com/49321618/75047982-c8909400-5495-11ea-9b44-9de9a1049340.png">
+
+<img width="697" alt="Stock Show Image" src="https://user-images.githubusercontent.com/49321618/75047999-cd554800-5495-11ea-83c6-5752482f39eb.png"/>
