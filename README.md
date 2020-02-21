@@ -23,6 +23,18 @@ Things you may want to cover:
 
 * ...
 
-SmartInvest -
+SmartInvest - (https://smart-invest.herokuapp.com/)
 
-SmartInvest is an investing app with no fees.
+SmartInvest is an investing app built using Ruby on Rails and React-redux. The idea was to imitate the robinhood website (www.robinhood.com).
+
+Once you create an account on this app, you will be redirect to your homepage where you'll be able to see a news fees. The news feed is coming from the NewsAPI and has been filtered to only news articles related to stocks.
+
+You will also be able to see your buying power and the history of all of your transactions.
+
+The app includes a stock index page with all stocks from the S&P 500. I have seeded the database with this data by using a csv file as a source.
+
+Each company in the Stock Index table is a link that takes you to a Stock show page. The stock show page makes an ajax call to the World Trading Data API to retrieve the most recent stock price information about that particular stock. I am then filtering the data to only store dates and closing prices about that particular stock in my redux state. Finally, the stock show React Presentational Component alters the data into an array of JS objects that can be feeded into my graph. The graph is made using 'Recharts', a charting library built with React.
+
+The stock show page also displays a form to buy the stock. It takes in one input (the number of shares the user would like to buy) the current market price is the most recent price received from the World Trading Data API and used to calculate the overall cost of the transaction. On Submit, the buying power of the user changes accordingly.
+
+Once the user goes back to his homepage, he will see the list of stocks that he bought, the price and his buying power at that particular time.
