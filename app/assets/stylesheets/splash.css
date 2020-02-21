@@ -107,7 +107,7 @@ position: relative;
 display: relative;
 }
 
-.green-signup-button-homepage::after {
+/* .green-signup-button-homepage::after {
 border-radius: 4px;
 position: absolute;
 content: "";
@@ -116,29 +116,28 @@ left: 0px;
 top: 0px;
 width: 0px;
 height: 100%;
-/* z-index: -1; */
 transform-origin:left;
 transition:width 0.25s ease;
 transition-duration: 500ms;
 transition-timing-function: ease;
 background-color: #18563e;
 color:white;
-/* width: 80%; */
-/* background: transparent; */
-}
+} */
 
 .green-signup-button-homepage:hover {
     color: white;
+    background-color: #18563e;
     /* content: "It's broken!" */
 }
 
-.green-signup-button-homepage:hover::after {
+/* .green-signup-button-homepage:hover::after {
     width: 100%;
     content: "Sign Up";
+} */
     /* text-align: center; */
     /* vertical-align: middle; */
     /* margin: auto; */
-}
+
 
 /* .text-inside-Sign-up-button {
       z-index: 4;
