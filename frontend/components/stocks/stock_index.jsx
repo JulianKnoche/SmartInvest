@@ -24,8 +24,11 @@ class StockIndex extends React.Component {
 
     render () {
         return (
+    <div>
+            <div className="NavBar-stock-index-page">
+                <Link className="homepage-button-in-nav-bar" to="/profile" ><div className="back-to-homepage-button-on-stock-index-page">SmartInvest</div></Link>
+            </div>
         <div className="stock-index-page">
-            <Link className="homepage-button-in-nav-bar" to="/profile" >Back to Homepage</Link>
             <table className="stock-index-table">
                 <thead>
                     <tr>
@@ -41,6 +44,7 @@ class StockIndex extends React.Component {
                 </tbody>
             </table>
         </div>
+    </div>
         )
     }
 }

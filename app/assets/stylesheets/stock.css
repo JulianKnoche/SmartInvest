@@ -2,19 +2,80 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    /* background-color: #21CE99; */
+    height: 100vh;
+    /* padding-bottom: 60px; */
 }
 
 .StockShowPage-navbar {
     display: flex;
     justify-content: flex-end;
-    margin-right: 2%;
+    margin: 0 10%;
+    /* background-color: #21CE99; */
+
+    /* margin: 2% 8%; */
+}
+
+.stock-show-body {
+    display: flex;
+    margin: 0 10%;
+    margin-bottom: 60px;
+}
+
+.ChartShowView {
+    width: 75%;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.stock-sidebar-form {
+    /* position: fixed; */
+    box-sizing: border-box;
+    width: 22%;
+    box-shadow: 0 0 4px 1px rgba(225, 225, 225, 0.5), 0 3px 24px rgba(225, 225, 225, 5);
+    border-radius: 4px;
+    margin-left: 5%;
+    padding: 0 2%;
+    height: 350px;
+    margin-top: 5%;
+    background-color: #18563e;
+    color: white;
+    font-family: "DINNextW01-Regular"
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    height: 30px;
+}
+
+.buyStock-button {
+
+    /* align-content: center; */
+    padding: 0;
+    background-color: #21CE99;
+    color: white;
+    width: 80%;
+    height: 40px;
+    font: 20px "DIN Pro";
+    border-radius: 4px;
+    margin: 20px 0px;
+    font-family: "DINNextW01-Regular"
+}
+
+.button-div {
+    display: flex;
+    justify-content: center;
+    border-top: gray solid 1px;
 }
 
 table,
 td {
     border: 1px solid #333;
     margin: auto;
-    width: 500px;
+    width: 600px;
 }
 
 thead,
@@ -24,10 +85,58 @@ tfoot {
 }
 
 .stock-index-page {
-    background-color: cadetblue;
+    background-color: #21CE99;
+    padding-top: 20px;
 }
 
 .stock-index-table {
-    background-color: lightblue;
+    background-color: white;
 }
 
+.form-input {
+    border-radius: 4px;
+    height: 100%;
+    /* padding: 0 13px; */
+    transition-duration: 0.2s;
+    border: 1px solid rgb(250, 250, 250);
+    background: #fafafa;
+    font-size: 100%;
+    width: 82px;
+    text-align: right;
+  }
+
+  .form-input:hover {
+    border-color: lightgrey;
+    background-color: #fff;
+  }
+
+  .form-input:focus {
+    outline: #21CE99;
+    border-color: #21CE99;
+    background-color: #fff;
+  }
+
+.form-header {
+    display: flex;
+    justify-content: center;
+}
+
+.NavBar-stock-index-page {
+    /* display: flex;
+    justify-content: space-between; */
+    margin: 0px;
+    padding: 10px;
+    background-color: #18563e;
+    color: white;
+}
+
+.back-to-homepage-button-on-stock-index-page {
+    padding: 4px;
+    color: white;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.back-to-homepage-button-on-stock-index-page:hover {
+    color: #21CE99;
+}

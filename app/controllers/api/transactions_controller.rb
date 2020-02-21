@@ -2,8 +2,12 @@ class Api::TransactionsController < ApplicationController
 
     def create
       @transaction = Transaction.new(transaction_params)
-
+      @user = User.find(params[:user_id])
+      
       if @transaction.save
+
+        @user.buying_power -= (@transaction.price*@transaction.units)
+        @user.save
         render "api/users/transactions/show";
       else
         render json: @transaction.errors.full_messages, status: 401

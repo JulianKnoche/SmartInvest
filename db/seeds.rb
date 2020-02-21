@@ -22,7 +22,7 @@ end
 
 
 
-User.create!(first_name: "Tommy", last_name: "Duek", email: "tommy@gmail.com", password: "hunter1234", buying_power: 1000)
-User.create!(first_name: "Julian", last_name: "K", email: "julian@gmail.com", password: "hunter1234", buying_power: 1000)
-User.create!(first_name: "Phong", last_name: "Ngo", email: "phong@gmail.com", password: "hunter1234", buying_power: 1000)
-User.create!(first_name: "Danny", last_name: "yoo", email: "danny@gmail.com", password: "hunter1234", buying_power: 1000)
+User.create!(first_name: "Tommy", last_name: "Duek", email: "tommy@gmail.com", password: "hunter1234", buying_power: 50000)
+User.create!(first_name: "Julian", last_name: "K", email: "julian@gmail.com", password: "hunter1234", buying_power: 50000)
+User.create!(first_name: "Phong", last_name: "Ngo", email: "phong@gmail.com", password: "hunter1234", buying_power: 50000)
+User.create!(first_name: "Danny", last_name: "Yoo", email: "danny@gmail.com", password: "hunter1234", buying_power: 50000)

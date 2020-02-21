@@ -17,17 +17,16 @@ const App = () => (
 <div>
     <header>
     </header>
-        <Route exact path = "/" component={NavBar}/>
-        <Route exact path = "/" component={Splash}/>
+        <AuthRoute exact path = "/" component={NavBar}/>
+        <AuthRoute exact path = "/" component={Splash}/>
     <Switch>
-
         <AuthRoute exact path="/login" component={LoginFormContainer}/>
         <AuthRoute exact path="/signup" component={SignupContainer}/>
         <ProtectedRoute exact path="/profile" component={Userhomepagecontainer}/>
-        <Route exact path="/stock/:stockSymbol" component={StockShowContainer}/>
-        <Route exact path = "/stocks" component={StockIndexContainer}/>
+        <ProtectedRoute exact path="/stock/:stockSymbol" component={StockShowContainer}/>
+        <ProtectedRoute exact path = "/stocks" component={StockIndexContainer}/>
     </Switch>
-    <Route exact path = "/" component={Footer}/>
+        <Route exact path = "/" component={Footer}/>
 </div>
 )
 

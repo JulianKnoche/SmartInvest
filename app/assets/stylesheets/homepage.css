@@ -48,3 +48,22 @@ display: flex;
 .homepage-button-in-nav-bar:hover {
     color: #18563e;
 }
+
+.news-feed-title {
+    display: flex;
+    justify-content: center;
+    border-bottom: solid 1px gray;
+    border-top: solid 1px gray;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.buying-power {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.side-stock-info-on-homepage {
+    margin-left: 2%;
+}

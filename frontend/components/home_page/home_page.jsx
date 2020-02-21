@@ -69,28 +69,30 @@ class UserProfile extends React.Component {
                 <h3>My portfolio</h3>
                 <div className="homepage-body">
                     <PortfolioChart/>
-                    <div> My buying power is: {this.props.currentUser.buying_power}</div>
-                    <table>
-                        <thead>
-                            <tr>
-                                <th colSpan="3"> History of my transactions </th>
-                            </tr>
-                            <tr>
-                                <th>Stock Ticker</th>
-                                <th>Count</th>
-                                <th>Unit Price</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.parseListOfTransactions()}
-                        </tbody>
-                    </table>
+                    <div className="side-stock-info-on-homepage">
+                        <div className="buying-power"> My buying power is: {this.props.currentUser.buying_power}</div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th colSpan="3"> History of my transactions </th>
+                                </tr>
+                                <tr>
+                                    <th>Stock Ticker</th>
+                                    <th>Count</th>
+                                    <th>Unit Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {this.parseListOfTransactions()}
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
             <br/>
 
             <div className="news-feed">
-                <h2>News Feed</h2>
+                <h2 className= "news-feed-title">News Feed</h2>
                 <ul>
                     {this.displayNews()}
                 </ul>
